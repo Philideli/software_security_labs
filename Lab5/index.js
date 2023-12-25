@@ -34,7 +34,7 @@ app.post('/api/login', async (req, res) => {
 
     const getUserTokenData = {
         method: 'post',
-        url: `https://dev-lx288wyj7b3ybbcr.us.auth0.com/oauth/token`,
+        url: `https://dev-tvfcmdxn6j7sl5k0.us.auth0.com/oauth/token`,
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
         },
@@ -42,10 +42,10 @@ app.post('/api/login', async (req, res) => {
             grant_type: 'password',
             username: login,
             password: password,
-            audience: 'https://dev-lx288wyj7b3ybbcr.us.auth0.com/api/v2/',
+            audience: 'https://dev-tvfcmdxn6j7sl5k0.us.auth0.com/api/v2/',
             scope: 'offline_access',
-            client_id: 'Ft75xpLvH9wfRfOIbcOT03UfzaL28RIE',
-            client_secret: 'ZbAgOplUESLfwPmTKV6OkxgcLmsK7_k-jn3ny_yuMvrCMWY1c4Xe8acYAMHC-sq7',
+            client_id: 'KTLXy6HNZuVdotdT4CA6TBvICQa6TTcT',
+            client_secret: '69eUyZmTDZSPiJbjZltKOC_a2psTXjMAWhNYNWwsQyHy-zuvvEDrKqCOnU-ImNVA',
         },
     };
 
@@ -94,8 +94,8 @@ const setHeader = (req, res, next) => {
 };
 
 const checkJwt = auth({
-    audience: "https://dev-lx288wyj7b3ybbcr.us.auth0.com/api/v2/",
-    issuerBaseURL: `https://dev-lx288wyj7b3ybbcr.us.auth0.com/`,
+    audience: "https://dev-tvfcmdxn6j7sl5k0.us.auth0.com/api/v2/",
+    issuerBaseURL: `https://dev-tvfcmdxn6j7sl5k0.us.auth0.com/`,
 });
 
 app.get("/api/private", setHeader, checkJwt, function (req, res) {
